@@ -15,10 +15,10 @@ export default function ListMenu(props) {
         }getCombo?id=${value}&type=${1}`
       )
       .then((res) => {
-        console.log(res.data.combo)
+        console.log(res.data.data)
         setNameLabel(
-          res.data.combo != undefined && res.data.combo != null
-            ? res.data.combo.name
+          res.data.data != undefined && res.data.data != null
+            ? res.data.data.name
             : ''
         )
       })

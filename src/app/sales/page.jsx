@@ -20,8 +20,8 @@ export default function SalesMain() {
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_SALES}getAll?page=1&records=50`
       )
       .then((res) => {
-        console.log(res.data.sales)
-        setSales(res.data.sales)
+        console.log(res.data.data)
+        setSales(res.data.data)
       })
       .catch(function (error) {
         // handle error

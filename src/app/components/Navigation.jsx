@@ -12,8 +12,8 @@ export default function Navigation() {
         <Nav className='me-auto'>
           <Nav.Link href='/products'>Products</Nav.Link>
           <Nav.Link href='/sales'>Sales</Nav.Link>
-          <Nav.Link href='#pricing'>Contacto</Nav.Link>
-          <Nav.Link href='#pricing'></Nav.Link>
+          <Nav.Link href='/'>Contacto</Nav.Link>
+          <Nav.Link href='/'></Nav.Link>
         </Nav>
       </Container>
     </Navbar>

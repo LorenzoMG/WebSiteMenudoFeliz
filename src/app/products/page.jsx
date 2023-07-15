@@ -19,8 +19,8 @@ export default function Products() {
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_PRODUCTS}getAll?page=1&records=50`
       )
       .then((res) => {
-        console.log(res.data.products)
-        setProducts(res.data.products)
+        console.log(res.data.data)
+        setProducts(res.data.data)
       })
       .catch(function (error) {
         // handle error

@@ -31,7 +31,7 @@ export default function FormSale(props) {
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_SALES}getById?id=${idSale}`
       )
       .then((res) => {
-        setSale(res.data.sale)
+        setSale(res.data.data)
       })
       .catch((error) => {
         console.log('eerr' + error)
@@ -63,7 +63,7 @@ export default function FormSale(props) {
       .post(
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_SALES}insert`,
         {
-          sale,
+          data: sale,
         }
       )
       .then((response) => {})
@@ -79,7 +79,7 @@ export default function FormSale(props) {
       .put(
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_SALES}update`,
         {
-          sale,
+          data: sale,
         }
       )
       .then((response) => {})

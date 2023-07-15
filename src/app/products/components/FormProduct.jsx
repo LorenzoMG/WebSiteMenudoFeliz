@@ -60,7 +60,7 @@ export default function FormProduct(props) {
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_PRODUCTS}getById?idProduct=${idProduct}`
       )
       .then((res) => {
-        setProduct(res.data.product)
+        setProduct(res.data.data)
       })
       .catch((error) => {
         console.log('eerr' + error)
@@ -80,11 +80,11 @@ export default function FormProduct(props) {
       .post(
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_PRODUCTS}insert`,
         {
-          product,
+          data: product,
         }
       )
       .then((response) => {
-        console.log('response' + response.data)
+        console.log('response' + response.data.data)
       })
       .catch((error) => {
         console.log('eerr' + error)
@@ -98,11 +98,11 @@ export default function FormProduct(props) {
       .put(
         `${process.env.NEXT_PUBLIC_API_MENUDO}${process.env.NEXT_PUBLIC_URI_PRODUCTS}update`,
         {
-          product,
+          data: product,
         }
       )
       .then((response) => {
-        console.log('response' + response.data)
+        console.log('response' + response.data.data)
       })
       .catch((error) => {
         console.log('eerr' + error)
